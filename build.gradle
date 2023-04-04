@@ -18,6 +18,7 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 dependencies {
+    testImplementation 'org.projectlombok:lombok:1.18.22'
     dependencies {
         testImplementation 'com.codeborne:selenide:6.12.2'
         testImplementation 'com.codeborne:selenide-proxy:6.12.2'
@@ -31,10 +32,10 @@ dependencies {
         testImplementation 'io.cucumber:cucumber-java:7.11.0'
         testImplementation 'io.cucumber:cucumber-testng:7.11.1'
         testImplementation 'io.cucumber:cucumber-core:7.11.0'
-
         testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.5.1'
 
         testImplementation('org.testng:testng:7.7.1')
+        compileOnly 'org.projectlombok:lombok:1.18.22'
 
         //allure
         testImplementation 'org.aspectj:aspectjweaver:1.9.5'

@@ -13,6 +13,16 @@ public class ProdSettings implements Env {
     }
 
     @Override
+    public String meApiUrl() {
+        return "https://lg1.smartwallet.ru/";
+    }
+
+    @Override
+    public String keepLoggedIn() {
+        return "";
+    }
+
+    @Override
     public String mePassword() {
         return "1";
     }

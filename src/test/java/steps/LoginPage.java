@@ -39,7 +39,7 @@ public class LoginPage extends AllureListener {
     @And("Я нажимаю на кнопку входа")
     public void clickButton() {
         submitButton.click();
-        Selenide.sleep(4000);
+        Selenide.sleep(2000);
     }
 
     @Then("Я попадаю на страницу профиля")
@@ -53,7 +53,6 @@ public class LoginPage extends AllureListener {
     public void checkStatus(int expectedStatus) {
         given()
                 .get(Selenide.webdriver().driver().url())
-                .then()
-                .statusCode(expectedStatus);
+                .then().assertThat().statusCode(expectedStatus);
     }
 }
